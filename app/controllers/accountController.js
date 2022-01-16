@@ -46,6 +46,20 @@ module.exports = {
       });
   },
 
+  // Get Account by id
+  findById: (req, res) => {
+    Account.find({ accountId: req.params.accountId })
+      .then((data) => {
+        res.send(data);
+      })
+      .catch((err) => {
+        res.status(500).send({
+          message:
+            err.message || 'Some error occurred while creating the account.',
+        });
+      });
+  },
+
   update: async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {

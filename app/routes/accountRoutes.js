@@ -21,6 +21,9 @@ module.exports = (app) => {
   // Get all account
   router.get('/account', Account.findAll);
 
+  // Get account by id
+  router.get('/account/:accountId', Account.findById);
+
   // delete account by ids
   router.delete(
     '/account',
