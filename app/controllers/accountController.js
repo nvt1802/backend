@@ -34,7 +34,14 @@ module.exports = {
 
   // Get all Account
   findAll: (req, res) => {
-    Account.find()
+    const username = req.query.username || '';
+    Account.find({
+      username: { $regex: `.*${username}.*` },
+      duration: {
+        $gte: typeof req.query.durationStartDate !== 'undefined' ? new Date(req.query.durationStartDate) : new Date(1990, 12, 31),
+        $lt: typeof req.query.durationEndDate !== 'undefined' ? new Date(req.query.durationEndDate) : new Date(2222, 12, 31),
+      },
+    })
       .then((data) => {
         res.send(data);
       })
