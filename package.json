@@ -1,0 +1,57 @@
+{
+  "name": "exam-simulator",
+  "version": "1.0.0",
+  "description": "exam simulator",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "rest",
+    "api"
+  ],
+  "author": "DEV-NXX",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "child-process-promise": "^2.2.1",
+    "config": "^3.3.6",
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.1",
+    "express-validator": "^6.14.0",
+    "express-ws": "^4.0.0",
+    "file-stream-rotator": "^0.5.7",
+    "http-errors": "^1.8.0",
+    "json2csv": "^5.0.5",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "lodash-unwind": "^1.2.3",
+    "log4js": "^6.3.0",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
+    "mongodb": "^3.6.6",
+    "mongoose": "^5.12.6",
+    "morgan": "^1.10.0",
+    "multer": "^1.3.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "^2.5.0",
+    "server": "^1.0.21",
+    "ua-parser-js": "^0.7.21",
+    "uuid": "^8.3.2",
+    "xlsx": "^0.16.9"
+  },
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.13.0",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.0"
+  }
+}
